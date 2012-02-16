@@ -1,4 +1,4 @@
-define(['classic.amd'], function (classic) {
+define(['src/classic.amd'], function (classic) {
   describe('classic', function () {
     var Animal, Bunny, Jackrabbit,
         animal, bunny, jackrabbit;
