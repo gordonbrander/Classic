@@ -38,6 +38,11 @@ define(['classic.amd'], function (classic) {
       expect(typeof Animal.prototype.constructor).toBe('function');
     });
     
+    it('will not obscure constructor if one is provided',
+    function() {
+      expect(typeof Animal.prototype.constructor).toBe('function');
+    });
+    
     it('constructed objects have the fully-formed constructor function assigned to the constructor property of their prototype',
     function () {
       expect(typeof bunny.constructor).toBe('function');
@@ -46,8 +51,6 @@ define(['classic.amd'], function (classic) {
     
     it('constructs objects that inherit properties from ancestors', 
     function () {
-      console.log(bunny, jackrabbit);
-      
       expect(typeof bunny.run).toBe('function');
       expect(typeof jackrabbit.hop).toBe('function');
       expect(typeof jackrabbit.run).toBe('function');
