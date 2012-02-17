@@ -45,7 +45,7 @@ objects to be mixed in with the prototype:
     
     var myComposer = new Composer();
 
-Mix in objects are merged. and the last mentioned property wins,
+Mix in objects are merged and the last mentioned property wins,
 as you might expect.
 
 Want to do both? Go for it. The first property may optionally be a
