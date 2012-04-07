@@ -1,20 +1,17 @@
-# Classic
-
-Obvious inheritance for JavaScript.
+# Classic: obvious inheritance for JavaScript
 
 Classic gives you three types of inheritance:
 
-* Classical inheritance through prototype chaining
-* Multiple inheritance through object composition
-* Prototypal inheritance through a cross-browser polyfill for [Object.prototype.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create)
+* **Classical inheritance** through prototype chaining
+* **Multiple inheritance** through object composition
+* **Prototypal inheritance** through a cross-browser polyfill for [Object.prototype.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create)
 
-It's just about 1/2 of a Kb, minimized and gzipped. Yup, you read that right one *half* of a Kb.
-
-Inspired by @jashkenas' proposal: <https://gist.github.com/1329619>.
+And, it's just about 1/2 of a Kb, minified and gzipped.  
+Yup, you read that right: one *half* of a Kb.
 
 ## Example
 
-Check it out -- define a base class:
+Check it out -- define a class (constructor function):
 
     var Bunny = classic({
       hop: function (length) { ... }
