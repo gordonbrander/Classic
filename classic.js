@@ -1,4 +1,4 @@
-var classic = (function () {
+var classic = function () {
 
 // Fast slice lookup.
 var slice = Array.prototype.slice;
@@ -136,4 +136,4 @@ classic.create = create;
 classic.merge = merge;
 
 return classic;
-});
+}();
