@@ -65,6 +65,12 @@ Furthermore, you can do direct prototypal inheritance using `classic.create`:
 * **Efficient**: uses prototypal inheritance and prototype chaining, leaves default objects alone. No black magic here.
 * **JavaScript Objects are awesome!**: Jeremy Ashenkas got it right with his [classes-from-object-literals proposal](https://gist.github.com/1329619). While we're waiting for the standards committee to figure things out, let's imitate what makes sense.
 
+## Browser support and testing
+
+Should work everywhere. Also, Node and AMD script loaders are supported through `classic.node.js` and `classic.amd.js`.
+
+You can run the unit tests by installing the dependencies (see below) and running `make test`.
+
 ## Freebies
 
 In addition to classic, you get a couple of free functions that are useful for working with objects:
@@ -88,4 +94,25 @@ Gives you:
        footType: 'webbed'
     });
 
-`classic.create`: create a prototype chain between two objects. Delegates to [Object.prototype.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create), if supported.
+`classic.create`: create a prototype chain between two objects. Delegates to [Object.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create), if supported.
+
+## Development
+
+Unit tests use jasmine-node, which depends on [Node.js](http://nodejs.org/) and [NPM](http://npmjs.org/). If you are developing on Mac OS X, an easy way to install Node and NPM is using [Homebrew](http://mxcl.github.com/homebrew/):
+
+    brew install node
+    brew install npm
+
+Next, from the root directory of this repo, install the dependencies:
+
+    make install
+
+You can also get some pretty documentation for the script:
+
+    make docs
+
+If you plan on hacking the script, you can edit `src/classic.js` and then build the various versions automatically:
+
+    make all
+
+This will create source and minified versions of all the files, as well as generating docs from the source.
