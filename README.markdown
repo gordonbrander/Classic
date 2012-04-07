@@ -4,7 +4,7 @@ Classic gives you three types of inheritance:
 
 * **Classical inheritance** through prototype chaining
 * **Multiple inheritance** through object composition
-* **Prototypal inheritance** through a cross-browser polyfill for [Object.prototype.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create)
+* **Prototypal inheritance** through a cross-browser polyfill for [Object.create](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object/create)
 
 And, it's just about 1/2 of a Kb, minified and gzipped.  
 Yup, you read that right: one *half* of a Kb.
