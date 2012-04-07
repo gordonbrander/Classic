@@ -1,0 +1,18 @@
+{
+  "name": "Classic",
+  "version": "0.1.0",
+  "description": "Obvious inheritance for JavaScript",
+  "author": {
+    "name": "Gordon Brander",
+    "url": "http://gordonbrander.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gordonbrander@github.com/gordonbrander/Classic.git"
+  },
+  "devDependencies": {
+    "docco": ">= 0.3.0",
+    "uglify-js": ">= 1.2.6",
+    "jasmine-node": ">= 1.0.23"
+  }
+}
