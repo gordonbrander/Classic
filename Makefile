@@ -1,7 +1,8 @@
 NODE_PATH ?= ./node_modules
-JS_COMPILER = $(NODE_PATH)/uglify-js/bin/uglifyjs
-DOCCO = $(NODE_PATH)/docco/bin/docco
-TEST = $(NODE_PATH)/jasmine-node/bin/jasmine-node
+MINIFIER = ${NODE_PATH}/uglify-js/bin/uglifyjs
+DOCS = ${NODE_PATH}/docco/bin/docco
+TEST = ${NODE_PATH}/jasmine-node/bin/jasmine-node
+CONCAT = cat > $@ $^
 
 all: classic.min.js classic.amd.min.js classic.node.js docs
 
@@ -10,19 +11,19 @@ install:
 	npm install
 
 docs:
-	$(DOCCO) src/classic.js
+	${DOCS} src/classic.js
 
 test:
-	$(TEST) ./spec/
+	${TEST} ./spec/
 
 classic.js: lib/std.header.js src/classic.js lib/std.footer.js
-	cat > $@ $^
+	${CONCAT}
 
 classic.amd.js: lib/amd.header.js src/classic.js lib/amd.footer.js
-	cat > $@ $^
+	${CONCAT}
 
 classic.node.js: src/classic.js lib/node.exports.js
-	cat > $@ $^
+	${CONCAT}
 
 %.min.js: %.js Makefile
-	$(JS_COMPILER) < $< > $@
+	${MINIFIER} < $< > $@
