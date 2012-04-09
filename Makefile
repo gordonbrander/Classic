@@ -16,13 +16,13 @@ docs:
 test:
 	${TEST} ./spec/
 
-classic.js: lib/std.header.js src/classic.js lib/std.footer.js
+classic.js: lib/license.js lib/std.header.js src/classic.js lib/std.footer.js
 	${CONCAT}
 
-classic.amd.js: lib/amd.header.js src/classic.js lib/amd.footer.js
+classic.amd.js: lib/license.js lib/amd.header.js src/classic.js lib/amd.footer.js
 	${CONCAT}
 
-classic.node.js: src/classic.js lib/node.exports.js
+classic.node.js: lib/license.js src/classic.js lib/node.exports.js
 	${CONCAT}
 
 %.min.js: %.js Makefile
